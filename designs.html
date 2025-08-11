@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Bousebata - Designs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        
+        /* SECTION TITRE */
+        .projects {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .projects .title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #00f7ff, #ff00aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* GALERIE ANIMÉE */
+        .design-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .design-grid {
+            display: flex;
+            gap: 20px;
+            animation: scrollLeft 60s linear infinite;
+            width: max-content;
+        }
+
+        .design-grid img {
+            border-radius: 10px;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .design-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* CONTACT */
+        .cards.contact {
+            padding: 60px 20px;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .cards .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            border-radius: 12px;
+            width: 180px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #00f7ff;
+        }
+
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+
+        /* PARTICULES CANVAS */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+       /* Boutons flottants */
+    .home-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #8b5cf6;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 999;
+      transition: transform 0.3s ease;
+    }
+    .home-btn:hover {
+      transform: scale(1.1);
+      background: #a78bfa;
+    }
+    .home-btn {
+      right: 70px;
+      display: block;
+    }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Particules -->
+    <div id="particles-js"></div>
+
+   <!-- Navigation -->
+  <header class="nav" role="banner">
+    <div class="brand" aria-label="Logo Mohammed Bousebata">MB<span class="dot">.</span></div>
+    <nav>
+      <button id="themeToggle" aria-label="Basculer thème">🌙</button>
+    </nav>
+  </header>
+
+    <!-- GALERIE -->
+    <section class="projects">
+        <h2 class="title">Designs</h2>
+        <div class="design-wrapper">
+            <div class="design-grid">
+                <!-- Images originales -->
+                <img src="sites web/Site 1/Design/Design 1.jpeg">
+                <img src="sites web/Site 1/Design/Design 2.jpeg">
+                <img src="sites web/Site 1/Design/Design 3.jpeg">
+                <img src="sites web/Site 1/Design/Design 4.jpeg">
+                <img src="sites web/Site 1/Design/Design 5.jpeg">
+                <img src="sites web/Site 1/Design/Design 6.jpeg">
+                <img src="sites web/Site 1/Design/Design 7.jpeg">
+                <img src="sites web/Site 1/Design/Design 8.jpeg">
+                <img src="sites web/Site 1/Design/Design 9.jpeg">
+                <!-- DUPLICATION pour boucle infinie -->
+                <img src="sites web/Site 1/Design/Design 1.jpeg">
+                <img src="sites web/Site 1/Design/Design 2.jpeg">
+                <img src="sites web/Site 1/Design/Design 3.jpeg">
+                <img src="sites web/Site 1/Design/Design 4.jpeg">
+                <img src="sites web/Site 1/Design/Design 5.jpeg">
+                <img src="sites web/Site 1/Design/Design 6.jpeg">
+                <img src="sites web/Site 1/Design/Design 7.jpeg">
+                <img src="sites web/Site 1/Design/Design 8.jpeg">
+                <img src="sites web/Site 1/Design/Design 9.jpeg">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="cards contact" id="contact">
+        <h2 class="title">Contact</h2>
+        <div class="content">
+            <a href="https://wa.me/212694835747" target="_blank">
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="info"><h3>WhatsApp</h3></div>
+                </div>
+            </a>
+            <a href="mailto:mohammedbousebata8@gmail.com">
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info"><h3>Email</h3></div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/mohammed.bousebata/" target="_blank">
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="info"><h3>Instagram</h3></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="footer">
+      <small>© <span id="year"></span> Mohammed Bousebata</small>
+    </footer>
+
+    <!-- Boutons -->
+  <a href="index.html" class="home-btn"><i class="fa-solid fa-house"></i></a>
+
+    <!-- SCRIPT PARTICULES -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#00f7ff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": true },
+                "size": { "value": 3, "random": true },
+                "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "out_mode": "out" }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } } }
+            },
+            "retina_detect": true
+        });
+
+        
+    </script>
+
+</body>
+</html>

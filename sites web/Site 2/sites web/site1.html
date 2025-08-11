@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB Design Studio - Home</title>
+    <link rel="icon" type="image/png" href="Images/Logo.png">
+    <link rel="stylesheet" href="Css/styles.css">
+</head>
+<body>
+    <header>
+        <div id="logo" class="logo">
+            <img src="images/logo.png" alt="MB Design Studio Logo">
+        </div>
+
+        <button onclick="showSidebar()" class="nav-toggle" aria-label="Open menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <button onclick="hideSidebar()" class="nav-x">X</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Basket</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="header-button">Login</a></li>
+                <li><a href="#" class="header-button">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <header class="sidebar">
+        <nav>
+            <ul class="nav-links1">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Basket</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to MB Design Studio</h2>
+            <p>Discover our latest designs, explore creative ideas, and get inspired by innovative projects.</p>
+            <a href="#" class="cta-button">Explore Designs</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>At MB Design Studio, we offer a collection of unique and captivating designs that push the boundaries of creativity. Whether you're looking for modern art, interactive web designs, or graphic concepts, we have something for everyone.</p>
+        </div>
+    </section>
+
+    <section id="designs">
+        <h2 class="designs-title">Our Designs</h2>
+        <div class="design-grid" id="designGrid">
+            <!-- Images will be loaded dynamically here -->
+        </div>
+        <a href="#" id="more">More Designs ></a>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Send a Message</h2>
+            <form id="contactForm" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <p id="formMessage" class="form-message"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MB Design Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTop" title="Back to top">↑</button>
+
+    <script src="Js/script.js"></script>
+</body>
+</html>

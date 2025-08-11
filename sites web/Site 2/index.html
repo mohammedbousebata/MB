@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Bousebata</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="images/logo.png"/></a>
+        <nav class="navigation">
+            <a onclick="hideMenu()" href="#services">Services</a>
+            <a onclick="hideMenu()" href="#projects">Projets</a>
+            <a onclick="hideMenu()" href="#contact">Contact</a>
+        </nav>
+        <button onclick="showMenu()" class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <button onclick="hideMenu()" class="close-menu"><i class="fa-solid fa-caret-down"></i></button>
+    </header>
+    <section class="main">
+        <div>
+            <h2>Bonjour, je suis Mohammed Bousebata<br><span>Full stack developer</span></h2>
+            <h3>Allier logique et créativité</h3>
+            <a href="#projects" class="main-btn">Voir Plus</a>
+            <div class="social-icons">
+                <a href="https://wa.me/212694835747"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/mohammed.bousebata/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/mohammedbousebata"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:mohammedbousebata8@gmail.com"><i class="fa-solid fa-envelope"></i></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="cards" id="services">
+        <h2 class="title">Services</h2>
+        <div class="content">
+
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="info">
+                    <h3>Full Stack Développeur</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <div class="info">
+                    <h3>Designer</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <h2 class="title">Projects</h2>
+        <div class="content">
+            <div class="project-card">
+                <div class="img-project">
+                    <img src="images/work1.jpg"/>
+                </div>
+                <div class="project-info">
+                    <p class="project-title">Des sites web</p>
+                    <a href="websites.html" class="more-details">Plus de détails</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="img-project">
+                    <img src="images/work2.jpg"/>
+                </div>
+                <div class="project-info">
+                    <p class="project-title">Des designs</p>
+                    <a href="designs.html" class="more-details">Plus de détails</a>
+                </div>
+            </div>
+    
+
+    
+
+
+        </div>
+    </section>
+    <section class="cards contact" id="contact">
+        <h2 class="title">Contact</h2>
+        <div class="content">
+            <a href="https://wa.me/212694835747">
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="info">
+                    <h3>WhatsApp</h3>
+                </div>
+            </div>
+            </a>
+
+            <a href="mailto:mohammedbousebata8@gmail.com">
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="info">
+                    <h3>Mail</h3>
+                </div>
+            </div>
+            </a>
+
+            <a href="https://www.instagram.com/mohammed.bousebata/">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="info">
+                        <h3>Instagram</h3>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>À propos</h2>
+                <p>Merci de visiter mon site. Je suis un étudiant passionné par le développement web.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Liens</h2>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact</h2>
+                <div class="social-icons1">
+                    <a href="https://wa.me/212694835747"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/mohammed.bousebata/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/mohammedbousebata"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:mohammedbousebata8@gmail.com"><i class="fa-solid fa-envelope"></i></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mohammed Bousebata. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <button id="scrollToTop" title="Back to top">↑</button>
+      <!-- Bouton Accueil -->
+  <a href="../../index.html" class="home-btn"><i class="fa-solid fa-house"></i></a>
+  <style>
+    /* BOUTON ACCUEIL */
+.home-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 70px;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.home-btn:hover {
+  transform: scale(1.1);
+  background: #a78bfa;
+}
+  </style>
+    <script src="scripti.js"></script>
+</body>
+</html>
