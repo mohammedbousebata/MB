@@ -1,0 +1,371 @@
+/* --------- Reset & Base --------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* --------- Fond particules --------- */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+
+/* --------- Halo lumineux souris --------- */
+#mouse-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(0,255,255,0.2), transparent 60%);
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* --------- Header --------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 40px);
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  flex-wrap: nowrap;
+}
+
+/* --------- Conteneur du logo --------- */
+.logo {
+  display: flex;
+  align-items: center; /* centre verticalement */
+  gap: 10px; /* espace entre image et texte */
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* --------- Image du logo --------- */
+.logo img {
+  max-width: 150px;
+  height: 70px;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.6));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* --------- Texte du logo --------- */
+.logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: linear-gradient(90deg, #00f5ff, #00ff73); /* Hicham */
+}
+
+.logo h2 span {
+  color: #00ff73; /* Info en vert fluo */
+  text-shadow: 0 0 10px #00ff73, 0 0 20px #00f5ff;
+}
+
+/* --------- Effets hover --------- */
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo:hover img {
+  filter: drop-shadow(0 0 15px #00f5ff) drop-shadow(0 0 25px #00ff73);
+  transform: rotate(-2deg);
+}
+
+.logo:hover h2 span {
+  color: #00f5ff;
+  text-shadow: 0 0 15px #00f5ff, 0 0 25px #00ff73;
+}
+
+/* --------- Version responsive --------- */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 120px;
+    height: 50px;
+  }
+  .logo h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 50px;
+    height: 35px;
+  }
+  .logo h2 {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* --------- Menu burger --------- */
+.menu-btn {
+  width: clamp(28px, 4vw, 35px);
+  height: clamp(24px, 3.5vw, 28px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 10001;
+  flex-shrink: 0;
+}
+.menu-btn .bar {
+  height: clamp(3px, 0.5vw, 4px);
+  width: 100%;
+  background: #00f5ff;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.menu-btn:hover { transform: scale(1.1); }
+.menu-btn:hover .bar {
+  box-shadow: 0 0 12px #00f5ff, 0 0 25px #00ff73;
+}
+/* Animation burger -> croix */
+.menu-btn.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  box-shadow: 0 0 12px #00f5ff, 0 0 25px #00ff73;
+}
+.menu-btn.active .bar:nth-child(2) { opacity: 0; }
+.menu-btn.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  box-shadow: 0 0 12px #00f5ff, 0 0 25px #00ff73;
+}
+
+/* --------- Overlay menu --------- */
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(20px, 5vw, 40px);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 999;
+}
+.menu-overlay.active { transform: translateX(0); }
+.menu-overlay a {
+  color: #00f5ff;
+  font-size: clamp(1.5em, 4vw, 2em);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.menu-overlay a:hover { color: #00ff73; }
+
+/* --------- Hero --------- */
+.hero {
+  text-align: center;
+  padding: clamp(80px, 10vh, 100px) 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.hero h1 {
+  font-size: clamp(1.5em, 5vw, 2.5em);
+  color: #00f5ff;
+  text-shadow: 0 0 15px #00f5ff, 0 0 30px #00ff73;
+}
+.hero p {
+  font-size: clamp(0.9em, 2vw, 1.2em);
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+.btn {
+  margin-top: 20px;
+  padding: clamp(8px, 1vw, 12px) clamp(18px, 2vw, 25px);
+  background: linear-gradient(90deg, #00f5ff, #00ff73);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #00f5ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00ff73;
+}
+
+/* --------- Produits --------- */
+.produits-title {
+  text-align: center;
+  margin: 20px;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+.produits-section {
+  padding: clamp(50px, 10vh, 100px) 20px;
+  background: rgba(0,0,0,0.7);
+}
+.produits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(15px, 4vw, 30px);
+  margin-top: 40px;
+}
+.produit-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.produit-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.produit-card:hover {
+  transform: rotateY(5deg) scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+.produit-card .btn { display: inline-block; margin-top: 10px; margin-bottom: 15px; padding: 10px 20px; background: linear-gradient(90deg, #00f5ff, #00ff73); color: white; border-radius: 30px; text-decoration: none; text-decoration: none; border-radius: 25px; font-weight: bold; box-shadow: 0 0 15px #00f5ff; transition: transform 0.3s, box-shadow 0.3s; }
+
+/* --------- Contact --------- */
+.cards.contact {
+  padding: 60px 20px;
+  background: rgba(255,255,255,0.05);
+}
+.cards .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 12px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.card:hover { transform: translateY(-5px); }
+.card .icon { font-size: 2rem; margin-bottom: 10px; color: #00f7ff; }
+.card h3 { margin-bottom: 10px; color: #00f7ff; }
+#contact a { text-decoration-line: none; }
+
+/* --------- Footer --------- */
+.footer {
+  background: rgba(0,0,0,0.85);
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid rgba(0, 245, 255, 0.3);
+  box-shadow: 0 -5px 20px rgba(0, 255, 255, 0.2);
+}
+.footer-logo {
+  font-size: clamp(1.5em, 2.5vw, 1.8em);
+  font-weight: bold;
+  color: #00f5ff;
+  margin-bottom: 15px;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 15px;
+  display: flex;
+  justify-content: center;
+  gap: clamp(15px, 4vw, 25px);
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: #00f5ff;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.footer-links a:hover {
+  color: #00ff73;
+  text-shadow: 0 0 10px #00ff73;
+}
+
+/* Conteneur réseaux sociaux */
+.footer-social {
+  display: flex;
+  justify-content: center; /* centrer horizontalement */
+  gap: 15px; /* espace entre les icônes */
+  margin-top: 20px;
+}
+
+/* Style des liens */
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #333; /* fond gris foncé */
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+/* Effet hover */
+.footer-social a:hover {
+  transform: scale(1.1);
+  background-color: #555;
+}
+
+/* Icônes spécifiques */
+.footer-social a:nth-child(1):hover {
+  background-color: #25D366; /* WhatsApp */
+}
+.footer-social a:nth-child(2):hover {
+  background-color: #1877F2; /* Facebook */
+}
+.footer-social a:nth-child(3):hover {
+  background-color: #E1306C; /* Instagram */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-social {
+    gap: 10px;
+  }
+
+  .footer-social a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+
+/* --------- Animations scroll --------- */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}

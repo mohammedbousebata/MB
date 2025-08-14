@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hicham Info</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Fond Particules -->
+  <div id="particles-js"></div>
+  <div id="mouse-light"></div>
+
+<header class="header">
+  <div class="logo">
+  <img src="assets/logo.png" alt="Logo Hicham Info">
+  <h2>Hicham <span>Info</span></h2>
+</div>
+
+
+  <!-- Bouton menu -->
+  <div class="menu-btn" id="menu-btn">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Menu overlay -->
+  <nav class="menu-overlay" id="menu-overlay">
+    <a href="#Accessoires">Accessoires</a>
+    <a href="#Smartphones">Smartphones</a>
+    <a href="#PC">PC</a>
+    <a href="#Services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+ <!-- Hero -->
+    <section class="hero">
+        <h1 id="typewriter"></h1>
+        <p>Smartphones • PC • Accessoires • Services</p>
+        <a href="#produits" class="btn">Explorer</a>
+    </section>
+
+  <!-- Produits -->
+    <h2 id="produits" class="produits-title" data-animate="fade-right">Nos Produits</h2>
+
+
+  <section id="PC" class="produits-section">
+    <h2 data-animate="fade-right">PC</h2>
+    <div class="produits-grid" id="pc-container"></div>
+  </section>  
+
+  <section id="Smartphones" class="produits-section">
+    <h2 data-animate="fade-right">Smartphones</h2>
+    <div class="produits-grid" id="smartphones-container"></div>
+  </section>
+
+  <section id="Accessoires" class="produits-section">
+    <h2 data-animate="fade-right">Accessoires</h2>
+    <div class="produits-grid" id="accessoires-container"></div>
+  </section>
+  
+  <section id="Services" class="produits-section">
+    <h2 data-animate="fade-right">Services</h2>
+    <div class="produits-grid" id="services-container"></div>
+  </section>
+
+ 
+
+ <!-- CONTACT -->
+    <section class="cards contact" id="contact">
+        <h2 class="title">Contact</h2>
+        <div class="content">
+            <a href="https://wa.me/212635221737" target="_blank">
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="info"><h3>WhatsApp</h3></div>
+                </div>
+            </a>
+            <a href="tel:+212635221737">
+              <div class="card">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="info"><h3>Appeler</h3></div>
+              </div>
+            </a>
+
+            <a href="mailto:hichaminfofes@gmail.com">
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info"><h3>Email</h3></div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/hicham.info.fes/" target="_blank">
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="info"><h3>Instagram</h3></div>
+                </div>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61579205260144" target="_blank">
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="info"><h3>Facebook</h3></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">⚡ Hicham Info</div>
+
+    <!-- Coordonnées -->
+    <div class="footer-contact">
+      <p><i class="fa-solid fa-location-dot"></i> Avenue Ain Chkaf, Fès, Maroc</p>
+      <p><i class="fa-solid fa-phone"></i> +212 6 35 22 17 37</p>
+      <p><i class="fa-solid fa-envelope"></i> hichaminfofes@gmail.com</p>
+    </div>
+
+    <!-- Liens -->
+    <ul class="footer-links">
+      <li><a href="#Accessoires">Accessoires</a></li>
+      <li><a href="#Smartphones">Smartphones</a></li>
+      <li><a href="#PC">PC</a></li>
+      <li><a href="#Services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Réseaux sociaux -->
+    <div class="footer-social">
+      <a href="https://wa.me/212635221737" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61579205260144" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/hicham.info.fes/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+
+    <p class="footer-text">© 2025 Hicham Info. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<!-- Bouton Accueil -->
+  <a href="../../index.html" class="home-btn"><i class="fa-solid fa-house"></i></a>
+  <style>
+    /* BOUTON ACCUEIL */
+.home-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 70px;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.home-btn:hover {
+  transform: scale(1.1);
+  background: #a78bfa;
+}
+  </style>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
